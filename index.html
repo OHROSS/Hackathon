@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>Crime Watch</title>
+<style type="text/css">
+body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
+iframe { border: none; }
+</style>
+<script type="text/javascript">
+var Dash = {
+    nextIndex: 0,
+
+    dashboards: [
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_0.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_1.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_2.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_3.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_4.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_5.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_6.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_7.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_8.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_9.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_10.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_11.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_12.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_13.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_14.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_15.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_16.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_17.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_18.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_19.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_19.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_20.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_21.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_22.html", time: 5},
+        {url: "https://ameycu.github.io/mondaylarceny/Monday_23.html", time: 5}
+
+
+    ],
+
+    display: function()
+    {
+        var dashboard = Dash.dashboards[Dash.nextIndex];
+        frames["displayArea"].location.href = dashboard.url;
+        Dash.nextIndex = (Dash.nextIndex + 1) % Dash.dashboards.length;
+        setTimeout(Dash.display, dashboard.time * 1000);
+    }
+};
+
+window.onload = Dash.display;
+</script>
+</head>
+<body>
+<iframe name="displayArea" width="100%" height="100%"></iframe>
+</body>
+</html>
